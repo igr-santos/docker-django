@@ -1,0 +1,20 @@
+nginx:
+  build: ./deploy
+  volumes:
+    - tmp:/var/www
+  links:
+    - django
+  ports:
+    - "80:80"
+
+django:
+  build: .
+  volumes:
+    - tmp:/var/www
+  expose:
+    - "8000"
+  links:
+    - postgres
+
+postgres:
+  image: postgres
