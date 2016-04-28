@@ -1,4 +1,6 @@
 {
+    "project_name": "example",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "host_name": "example.com",
-    "src": "src"
+    "source": "src"
 }
